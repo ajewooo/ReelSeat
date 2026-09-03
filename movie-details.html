@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReelSeat - Movie Details</title>
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/movies.css" />
+    <style>
+      /* Page Specific Detail Layout */
+      .detail-container {
+        display: grid;
+        grid-template-columns: 280px 1fr;
+        gap: 2.5rem;
+        background-color: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: 16px;
+        padding: 2rem;
+        margin-top: 1rem;
+      }
+
+      .detail-poster {
+        width: 100%;
+        border-radius: 12px;
+        aspect-ratio: 2 / 3;
+        object-fit: cover;
+      }
+
+      .detail-info {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .showtime-section {
+        margin-top: 2rem;
+      }
+
+      .showtime-grid {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-top: 1rem;
+      }
+
+      .time-slot-btn {
+        background-color: var(--bg-main);
+        border: 1px solid var(--border-color);
+        color: var(--text-main);
+        padding: 0.75rem 1.25rem;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: all 0.2s ease;
+      }
+
+      .time-slot-btn:hover,
+      .time-slot-btn.selected {
+        border-color: var(--accent-red);
+        background-color: rgba(229, 9, 20, 0.15);
+        color: #ffffff;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Top Navigation Header -->
+    <header class="navbar">
+      <a href="movies.html" class="nav-brand">
+        <span class="logo-icon">🏠</span>
+        <span class="logo-text">ReelSeat</span>
+      </a>
+      <div class="nav-icons">
+        <button
+          class="icon-btn"
+          onclick="window.location.href = 'my-tickets.html'"
+          aria-label="My Tickets"
+        >
+          📖
+        </button>
+        <button
+          class="icon-btn"
+          onclick="window.location.href = 'movies.html'"
+          aria-label="Search"
+        >
+          🔍
+        </button>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <a
+        href="movies.html"
+        style="
+          color: var(--text-muted);
+          text-decoration: none;
+          font-size: 0.9rem;
+        "
+        >&larr; Back to Catalog</a
+      >
+
+      <div class="detail-container">
+        <img
+          id="detail-poster"
+          src="assets/images/exorcist.jpg"
+          alt="Movie Poster"
+          class="detail-poster"
+        />
+
+        <div class="detail-info">
+          <h1 id="detail-title" class="movie-title">The Exorcist</h1>
+
+          <div class="movie-meta">
+            <span class="rating">⭐ <span id="detail-rating">8.1</span></span>
+            <span class="dot">•</span>
+            <span id="detail-year" class="year">1973</span>
+            <span class="dot">•</span>
+            <span id="detail-duration">122 mins</span>
+            <span class="dot">•</span>
+            <span id="detail-genre" class="genre">Horror</span>
+          </div>
+
+          <p id="detail-synopsis" class="synopsis">
+            When a young girl is possessed by a mysterious entity, her mother
+            seeks the help of two priests to save her.
+          </p>
+
+          <!-- Showtime Selection (Recognition Over Recall) -->
+          <div class="showtime-section">
+            <h3>Available Showtimes</h3>
+            <div id="showtime-list" class="showtime-grid">
+              <!-- Dynamic showtimes will populate here -->
+            </div>
+          </div>
+
+          <div style="margin-top: 1.5rem">
+            <button id="proceed-seats-btn" class="btn-primary" disabled>
+              Select Seats
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="assets/js/store.js"></script>
+    <script src="assets/js/movie-details.js"></script>
+  </body>
+</html>
