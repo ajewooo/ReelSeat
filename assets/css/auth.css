@@ -1,0 +1,157 @@
+/* Layout specifically for the login screen */
+.auth-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #0f0f11; 
+}
+
+.auth-header {
+  padding: 2rem 3rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.auth-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.auth-container {
+  width: 100%;
+  max-width: 520px;
+}
+
+.auth-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  margin-left: 0.2rem;
+}
+
+/* Red-bordered container matching the mockup */
+.auth-box {
+  background-color: #141416;
+  border: 1px solid rgba(229, 9, 20, 0.7); /* Pulls from your --accent-red */
+  border-radius: 12px;
+  padding: 2.5rem;
+}
+
+/* Form Inputs */
+.input-group {
+  margin-bottom: 1.25rem;
+}
+
+.input-group label {
+  display: block;
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.input-group input[type="email"],
+.input-group input[type="password"] {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  background-color: #1a1a1c;
+  border: 1px solid #2a2a2c;
+  border-radius: 6px;
+  color: var(--text-main);
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: var(--accent-red);
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+/* Checkbox */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+  appearance: none;
+  background-color: #1a1a1c;
+  border: 1px solid #333;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+}
+
+.checkbox-group input[type="checkbox"]:checked {
+  background-color: var(--accent-red);
+  border-color: var(--accent-red);
+}
+
+.checkbox-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Buttons and Links */
+.form-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+/* Overriding the global button to make it a pill shape for this page */
+.auth-submit {
+  padding: 0.8rem 4.5rem;
+  border-radius: 30px; 
+  font-size: 1rem;
+  background-color: #8c242b; /* Darker red for inactive state, matching mockup */
+}
+
+.auth-submit:hover {
+  background-color: var(--accent-red);
+}
+
+.forgot-link {
+  color: var(--text-main);
+  font-size: 0.85rem;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.signup-prompt {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.signup-link {
+  color: var(--text-main);
+  text-decoration: none;
+  font-weight: 800;
+}
