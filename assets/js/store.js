@@ -120,34 +120,3 @@ const DEFAULT_SHOWTIMES = [
   { id: "st-3", movieId: "obsession", hall: "Cinema 2", date: "2026-09-09", time: "16:30", price: 350, occupiedSeats: ["B2"] },
   { id: "st-4", movieId: "backrooms", hall: "Cinema 3", date: "2026-09-09", time: "20:00", price: 300, occupiedSeats: [] }
 ];
-
-// Initialize and Sync LocalStorage
-function initStorage() {
-  if (!localStorage.getItem("reelseat_movies")) {
-    localStorage.setItem("reelseat_movies", JSON.stringify(DEFAULT_MOVIES));
-  }
-  if (!localStorage.getItem("reelseat_showtimes")) {
-    localStorage.setItem("reelseat_showtimes", JSON.stringify(DEFAULT_SHOWTIMES));
-  }
-  if (!localStorage.getItem("reelseat_bookings")) {
-    localStorage.setItem("reelseat_bookings", JSON.stringify([]));
-  }
-}
-
-// Call storage setup immediately upon script load
-initStorage();
-
-// Data helper functions
-function getMovies() {
-  return JSON.parse(localStorage.getItem("reelseat_movies"));
-}
-
-function getMovieById(id) {
-  const movies = getMovies();
-  return movies.find(m => m.id === id) || movies[0];
-}
-
-function getShowtimesByMovieId(movieId) {
-  const showtimes = JSON.parse(localStorage.getItem("reelseat_showtimes"));
-  return showtimes.filter(s => s.movieId === movieId);
-}
