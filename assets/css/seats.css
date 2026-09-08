@@ -1,0 +1,222 @@
+/* --- Header & Legend --- */
+.seat-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+  padding: 0 1rem;
+}
+
+.page-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 0.2rem;
+  color: var(--text-main);
+}
+
+.cinema-subtitle {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.seat-legend {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+.seat-swatch {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Base Colors for Seats */
+.seat-swatch.selected, .seat.selected {
+  background-color: var(--seat-selected); /* Green */
+}
+
+.seat-swatch.unavailable, .seat.unavailable {
+  background-color: #ca8a04; /* Gold/Yellow */
+}
+
+.seat-swatch.occupied, .seat.occupied {
+  background-color: var(--seat-taken); /* Red */
+}
+
+.seat-swatch.available {
+  background-color: #e4e4e7; /* Light grey */
+}
+
+/* --- Cinema Stage Area --- */
+.cinema-stage {
+  background-color: #141416;
+  border: 1px solid rgba(229, 9, 20, 0.2);
+  border-radius: 12px;
+  padding: 3rem 2rem 1.5rem 2rem;
+  position: relative;
+  box-shadow: 0 0 60px rgba(229, 9, 20, 0.08) inset; /* Creates the subtle red glow from the image */
+  margin-bottom: 2rem;
+}
+
+/* Trapezoid Screen */
+.screen {
+  width: 55%;
+  margin: 0 auto 4rem auto;
+  background: linear-gradient(to bottom, #a1a1aa, #52525b);
+  text-align: center;
+  color: var(--text-main);
+  font-weight: 800;
+  font-size: 0.85rem;
+  padding: 0.6rem;
+  letter-spacing: 1px;
+  /* Cuts the rectangle into a trapezoid */
+  clip-path: polygon(8% 0, 92% 0, 100% 100%, 0% 100%);
+}
+
+/* --- Seat Mapping Layout --- */
+.seat-map {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.seat-row {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem; /* Gap between seat groupings */
+}
+
+.row-label {
+  width: 20px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: right;
+  color: var(--text-main);
+  margin-right: 1rem;
+}
+
+.seat-group {
+  display: flex;
+  gap: 0.8rem; /* Gap between individual seats */
+}
+
+/* Individual Seat Styling */
+.seat {
+  width: 32px;
+  height: 38px;
+  border: none;
+  /* Top is heavily rounded, bottom is flatter */
+  border-radius: 12px 12px 4px 4px; 
+  cursor: pointer;
+  transition: transform 0.1s ease, background-color 0.2s ease;
+}
+
+.seat.available {
+  background-color: #e4e4e7; /* Matches the light grey available seats in the image */
+}
+
+.seat.available:hover {
+  background-color: #d4d4d8;
+  transform: scale(1.05);
+}
+
+.seat.unavailable, .seat.occupied {
+  cursor: not-allowed;
+}
+
+/* Number Labels below the seats */
+.column-numbers {
+  margin-top: -0.5rem;
+}
+
+.col-label {
+  width: 32px; /* Matches seat width for perfect alignment */
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.selection-count {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 2rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* --- Footer Summary & Actions --- */
+.booking-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 1rem;
+}
+
+.summary-details p {
+  font-size: 1rem;
+  color: var(--text-main);
+  margin-bottom: 0.4rem;
+}
+
+.summary-details span {
+  font-weight: 700;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Footer Buttons */
+.btn-back {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: transparent;
+  color: var(--text-main);
+  border: 1px solid #3f3f46;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.btn-back:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.btn-proceed {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: #991b1b; /* Matches the darker red from the image */
+  color: var(--text-main);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.btn-proceed:hover {
+  background-color: var(--accent-red);
+}

@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Choose your seats - ReelSeat</title>
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/seats.css" />
+  </head>
+  <body>
+    <!-- Top Navigation Header -->
+    <header class="navbar">
+      <a href="movies.html" class="nav-brand">
+        <span class="logo-text">ReelSeat</span>
+      </a>
+      <div class="nav-icons">
+        <button class="icon-btn" aria-label="Profile">
+        <button class="icon-btn" aria-label="Profile">👤</button>
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <!-- Header & Legend -->
+      <div class="seat-header-row">
+        <div>
+          <h1 class="page-title">Choose your seats</h1>
+          <p class="cinema-subtitle">Cinema Studio 1</p>
+        </div>
+        <div class="seat-legend">
+          <div class="legend-item">
+            <span class="seat-swatch selected"></span> Your Selection
+          </div>
+          <div class="legend-item">
+            <span class="seat-swatch unavailable"></span> Unavailable
+          </div>
+          <div class="legend-item">
+            <span class="seat-swatch occupied"></span> Occupied
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Stage Area -->
+      <section class="cinema-stage">
+        <div class="screen">THE SCREEN HERE</div>
+
+        <div class="seat-map">
+          <!-- Row A -->
+          <div class="seat-row">
+            <span class="row-label">A</span>
+            <div class="seat-group">
+              <button class="seat unavailable" aria-label="Seat A1"></button>
+              <button class="seat available" aria-label="Seat A2"></button>
+            </div>
+            <div class="seat-group">
+              <button class="seat available" aria-label="Seat A3"></button>
+              <button class="seat available" aria-label="Seat A4"></button>
+              <button class="seat available" aria-label="Seat A5"></button>
+              <button class="seat available" aria-label="Seat A6"></button>
+            </div>
+            <div class="seat-group">
+              <button class="seat available" aria-label="Seat A7"></button>
+              <button class="seat available" aria-label="Seat A8"></button>
+            </div>
+          </div>
+
+          <!-- Row B -->
+          <div class="seat-row">
+            <span class="row-label">B</span>
+            <div class="seat-group">
+              <button class="seat available" aria-label="Seat B1"></button>
+              <button class="seat available" aria-label="Seat B2"></button>
+            </div>
+            <div class="seat-group">
+              <button class="seat available" aria-label="Seat B3"></button>
+              <button class="seat available" aria-label="Seat B4"></button>
+              <button class="seat available" aria-label="Seat B5"></button>
+              <button class="seat available" aria-label="Seat B6"></button>
+            </div>
+            <div class="seat-group">
+              <button class="seat available" aria-label="Seat B7"></button>
+              <button class="seat available" aria-label="Seat B8"></button>
+            </div>
+          </div>
+
+          <!-- Row C -->
+          <div class="seat-row">
+            <span class="row-label">C</span>
+            <div class="seat-group">
+              <button class="seat available" aria-label="Seat C1"></button>
+              <button class="seat available" aria-label="Seat C2"></button>
+            </div>
+            <div class="seat-group">
+              <button class="seat available" aria-label="Seat C3"></button>
+              <button class="seat available" aria-label="Seat C4"></button>
+              <button class="seat available" aria-label="Seat C5"></button>
+              <button class="seat available" aria-label="Seat C6"></button>
+            </div>
+            <div class="seat-group">
+              <button class="seat available" aria-label="Seat C7"></button>
+              <button class="seat available" aria-label="Seat C8"></button>
+            </div>
+          </div>
+
+          <!-- Row D -->
+          <div class="seat-row">
+            <span class="row-label">D</span>
+            <div class="seat-group">
+              <button class="seat available" aria-label="Seat D1"></button>
+              <button class="seat available" aria-label="Seat D2"></button>
+            </div>
+            <div class="seat-group">
+              <button class="seat available" aria-label="Seat D3"></button>
+              <button class="seat selected" aria-label="Seat D4"></button>
+              <button class="seat occupied" aria-label="Seat D5"></button>
+              <button class="seat available" aria-label="Seat D6"></button>
+            </div>
+            <div class="seat-group">
+              <button class="seat available" aria-label="Seat D7"></button>
+              <button class="seat available" aria-label="Seat D8"></button>
+            </div>
+          </div>
+
+          <!-- Column Numbers -->
+          <div class="seat-row column-numbers">
+            <span class="row-label"></span>
+            <!-- Empty spacer for alignment -->
+            <div class="seat-group">
+              <span class="col-label">1</span>
+              <span class="col-label">2</span>
+            </div>
+            <div class="seat-group">
+              <span class="col-label">3</span>
+              <span class="col-label">4</span>
+              <span class="col-label">5</span>
+              <span class="col-label">6</span>
+            </div>
+            <div class="seat-group">
+              <span class="col-label">7</span>
+              <span class="col-label">8</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="selection-count">Number of seats selected: 1/1</div>
+      </section>
+
+      <!-- Footer Summary & Actions -->
+      <section class="booking-footer">
+        <div class="summary-details">
+          <p>Selected Seats: <span>Row D (4)</span></p>
+          <p>Ticket Count: <span>1 Seats</span></p>
+          <p>Total Price: <span>₱610.00</span></p>
+        </div>
+
+        <div class="action-buttons">
+          <a href="movie-details.html" class="btn-back">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M15 18l-6-6 6-6" />
+            </svg>
+            Back
+          </a>
+          <a href="snacks.html" class="btn-proceed">
+  Proceed to Snacks
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+</a>
+              <path d="M9 18l6-6-6-6" />
+            </svg>
+          </a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
