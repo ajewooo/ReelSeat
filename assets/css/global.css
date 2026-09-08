@@ -16,6 +16,10 @@
   --seat-taken: #ef4444;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Global Box Reset */
 * {
   box-sizing: border-box;

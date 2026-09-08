@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OBSESSION - ReelSeat</title>
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/movie-details.css" />
+  </head>
+  <body>
+    <!-- Top Navigation Header -->
+    <header class="navbar">
+      <a href="movies.html" class="nav-brand">
+        <span class="logo-text">ReelSeat</span>
+      </a>
+      <div class="nav-icons">
+        <button class="icon-btn" aria-label="My Tickets">📖</button>
+        <button class="icon-btn" aria-label="Search">🔍</button>
+        <button class="icon-btn" aria-label="Profile">👤</button>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <!-- Top Backdrop with Trailer Play Button -->
+      <section
+        class="movie-backdrop"
+        style="
+          background-image:
+            linear-gradient(rgba(18, 18, 20, 0.3), rgba(18, 18, 20, 1)),
+            url(&quot;assets/images/obsession-banner.jpeg&quot;);
+        "
+      >
+        <button class="play-trailer-btn" aria-label="Play Trailer">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M8 5v14l11-7z" />
+          </svg>
+        </button>
+      </section>
+
+      <!-- Movie Information Layout -->
+      <section class="movie-layout">
+        <!-- Left: Overlapping Poster -->
+        <div class="poster-column">
+          <div class="detail-poster-wrapper">
+            <img src="assets/images/obsession.jpeg" alt="Obsession" />
+          </div>
+        </div>
+
+        <!-- Right: Movie Details -->
+        <div class="info-column">
+          <div class="movie-header">
+            <span class="now-showing-tag"
+              ><span class="dot"></span> Now showing</span
+            >
+            <div class="title-row">
+              <h1 class="detail-title">Obsession</h1>
+              <span class="age-rating">R-16</span>
+            </div>
+            <a href="#showtimes" class="btn-primary book-btn">Book Tickets</a>
+          </div>
+
+          <div class="details-grid">
+            <!-- Left Info Column -->
+            <div class="details-left">
+              <div class="info-block">
+                <h3>Cast</h3>
+                <p>Michael Johnston, Inde Navarrette, Cooper Tomlinson</p>
+              </div>
+              <div class="info-block">
+                <h3>Synopsis</h3>
+                <p>
+                  After breaking the mysterious "One Wish Willow" to win his
+                  crush's heart, a hopeless romantic finds himself getting
+                  exactly what he asked for but soon discovers that some desires
+                  come at a dark, sinister price.
+                </p>
+              </div>
+            </div>
+
+            <!-- Right Info Column -->
+            <div class="details-right">
+              <div class="info-block">
+                <h3>Runtime</h3>
+                <p>1h 48m</p>
+              </div>
+              <div class="info-block">
+                <h3>Release date</h3>
+                <p>8 June 2026</p>
+              </div>
+              <div class="info-block tags-block">
+                <span class="star-rating">⭐ 8</span>
+                <ul class="genre-list">
+                  <li>Horror</li>
+                  <li>Romance</li>
+                  <li>Thriller</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Adapted Showtimes Section (Dark Theme) -->
+      <section class="showtimes-section" id="showtimes">
+        <h2 class="section-title">Showtimes</h2>
+
+        <!-- Date Selector Strip -->
+        <div class="date-picker-strip">
+          <button class="arrow-btn">&lsaquo;</button>
+          <button class="date-tab active">TODAY</button>
+          <button class="date-tab">TOMORROW</button>
+          <button class="date-tab">FRI</button>
+          <button class="arrow-btn">&rsaquo;</button>
+        </div>
+
+        <!-- Cinema and Times -->
+        <div class="cinema-block">
+          <div class="cinema-meta">
+            <span class="attributes"
+              >Showtime attributes <span class="badge">2D</span>
+              <span class="badge">IMAX</span></span
+            >
+            <a
+              href="https://www.google.com/search?q=what+is+2d+and+imax&sxsrf=APpeQnsR24yUlojjivd-xifGruTkpS_D_Q%3A1788886387468"
+              target="_blank"
+              class="help-link"
+              >What do these mean?</a
+            >
+          </div>
+
+          <h3 class="cinema-name">SM CDO Downtown Premier</h3>
+          <p class="all-showtimes">
+            All showtimes: <span class="badge">2D</span>
+            <span class="badge">IMAX</span>
+          </p>
+
+          <div class="time-slots-grid">
+            <a
+              href="seat-selection.html"
+              class="time-slot"
+              style="text-decoration: none; display: inline-block"
+              >2:30 <span>PM</span></a
+            >
+            <button class="time-slot">8:00 <span>PM</span></button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
