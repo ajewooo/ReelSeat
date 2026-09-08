@@ -8,23 +8,28 @@
     <link rel="stylesheet" href="assets/css/card-payment.css" />
   </head>
   <body>
-    <!-- Top Navigation Header -->
+    <!-- ==========================================
+         TOP NAVIGATION HEADER
+         Appears across all payment/checkout pages
+         ========================================== -->
+
     <header class="navbar">
       <a href="movies.html" class="nav-brand">
         <span class="logo-text">ReelSeat</span>
       </a>
       <div class="nav-icons">
         <button class="icon-btn" aria-label="Profile">👤</button>
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-            <circle cx="12" cy="7" r="4"></circle>
-          </svg>
-        </button>
       </div>
     </header>
 
+    <!-- ==========================================
+         MAIN CHECKOUT CONTAINER
+         Split layout: Left summary box & Right payment form
+         ========================================== -->
+
     <main class="checkout-wrapper">
       <div class="checkout-grid">
-        <!-- Left Panel: Summary -->
+        <!-- LEFT PANEL: Order Reference & Expiry Timer -->
         <aside class="summary-box">
           <p class="pay-notice">You are about to pay</p>
           <div class="total-price-tag">
@@ -32,12 +37,11 @@
             <span class="price-val">610.00</span>
           </div>
           <p class="merchant-name">
-            to REELSEAT ENTERTAINMENT INC. (CINEMA)<br /><span
-              class="sub-merchant"
-              >REELSEAT</span
-            >
+            to REELSEAT ENTERTAINMENT INC. (CINEMA)<br />
+            <span class="sub-merchant">REELSEAT</span>
           </p>
 
+          <!-- Unique IDs for database reference lookup -->
           <div class="meta-list">
             <div class="meta-row">
               <span>Reference No.</span>
@@ -49,6 +53,7 @@
             </div>
           </div>
 
+          <!-- Countdown Notice: Keeps users aware of hold time on seats -->
           <div class="timer-warning">
             <svg
               class="info-icon"
@@ -67,11 +72,12 @@
           </div>
         </aside>
 
-        <!-- Right Panel: Card Details Form -->
+        <!-- RIGHT PANEL: Credit/Debit Card Input Form -->
         <section class="form-box">
           <h2 class="form-heading">Pay using credit/debit card</h2>
 
           <form action="#" class="card-form">
+            <!-- Cardholder Name -->
             <div class="form-group">
               <label for="cardName">Name on Card</label>
               <input
@@ -82,6 +88,7 @@
               />
             </div>
 
+            <!-- Card Number Field (16-19 Digits) -->
             <div class="form-group">
               <label for="cardNumber">Card Number</label>
               <input
@@ -93,6 +100,7 @@
               />
             </div>
 
+            <!-- Expiry & CVV Input Row -->
             <div class="form-row-dual">
               <div class="form-group">
                 <label>Expiry Date</label>
@@ -115,6 +123,7 @@
               </div>
             </div>
 
+            <!-- User Consent & Terms Box -->
             <div class="checkbox-row">
               <input type="checkbox" id="authConsent" required />
               <label for="authConsent">
@@ -124,6 +133,7 @@
               </label>
             </div>
 
+            <!-- Service Confirmation Note -->
             <div class="info-callout">
               <svg
                 class="info-icon"
@@ -147,13 +157,14 @@
               >
             </div>
 
+            <!-- Form Action Controls -->
             <div class="form-actions">
               <a href="payment.html" class="btn-cancel">Cancel</a>
               <button type="submit" class="btn-submit">Submit</button>
             </div>
           </form>
 
-          <!-- Accepted Card Logos Footer -->
+          <!-- Accepted Payment Network Icons -->
           <div class="accepted-cards">
             <span class="card-badge mastercard">MC</span>
             <span class="card-badge visa">VISA</span>

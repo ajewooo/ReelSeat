@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Our cinema's home page - ReelSeat</title>
+    <title>Our Cinema's Home Page - ReelSeat</title>
     <link rel="stylesheet" href="assets/css/global.css" />
     <link rel="stylesheet" href="assets/css/movies.css" />
   </head>
   <body>
-    <!-- Top Navigation Header -->
+    <!-- Main Top Navigation -->
     <header class="navbar">
       <div class="nav-brand">
         <span class="logo-text">ReelSeat</span>
@@ -21,7 +21,10 @@
     </header>
 
     <main class="main-content">
-      <!-- Hero Banner Carousel -->
+      <!-- ==========================================
+           HERO FEATURED CAROUSEL
+           Highlights the #1 featured movie
+           ========================================== -->
       <section class="hero-carousel">
         <button class="carousel-arrow prev-btn" aria-label="Previous Movie">
           &#10094;
@@ -43,7 +46,6 @@
 
           <div class="hero-info">
             <h1 class="movie-title">OBSESSION</h1>
-
             <div class="movie-meta">
               <span class="rating">8.2</span>
               <span class="dot">•</span>
@@ -51,7 +53,6 @@
               <span class="dot">•</span>
               <span class="genre">Horror • Thriller</span>
             </div>
-
             <p class="synopsis">
               After breaking the mysterious "One Wish Willow" to win his crush's
               heart, a hopeless romantic finds himself getting exactly what he
@@ -66,9 +67,12 @@
         </button>
       </section>
 
-      <!-- Catalog Section -->
+      <!-- ==========================================
+           CATALOG GRID SECTION
+           Shows list of movies with dynamic tab filtering
+           ========================================== -->
       <section class="catalog-section">
-        <!-- Category Tabs -->
+        <!-- Category Tab Selection -->
         <div class="tab-navigation">
           <button class="tab-btn active" data-tab="now-showing">
             Now showing
@@ -76,9 +80,8 @@
           <button class="tab-btn" data-tab="coming-soon">Coming Soon</button>
         </div>
 
-        <!-- 10 Movie Grid (Matching Design Mockup) -->
+        <!-- 10-Item Responsive Movie Grid -->
         <div class="movie-grid" id="movie-grid">
-          <!-- Row 1 -->
           <a href="movie-details.html?id=exorcist" class="movie-card">
             <div class="poster-wrapper">
               <img src="assets/images/exorcist.jpg" alt="The Exorcist" />
@@ -117,7 +120,6 @@
             <span class="movie-card-title">(500) Days of Summer</span>
           </a>
 
-          <!-- Row 2 -->
           <a href="movie-details.html?id=dead-poets" class="movie-card">
             <div class="poster-wrapper">
               <img

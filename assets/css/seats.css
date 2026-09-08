@@ -204,9 +204,9 @@
 
 .btn-proceed {
   display: flex;
-  align-items: center;
+  align-items: center;  
   gap: 0.4rem;
-  background-color: #991b1b; /* Matches the darker red from the image */
+  background-color: rgb(229, 9, 20); /* Matches the darker red from the image */
   color: var(--text-main);
   border: none;
   padding: 0.8rem 1.5rem;
@@ -218,5 +218,5 @@
 }
 
 .btn-proceed:hover {
-  background-color: var(--accent-red);
+  background-color: #fd0000cc;
 }

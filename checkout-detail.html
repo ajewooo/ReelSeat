@@ -15,17 +15,15 @@
       </a>
       <div class="nav-icons">
         <button class="icon-btn" aria-label="Profile">👤</button>
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-            <circle cx="12" cy="7" r="4"></circle>
-          </svg>
-        </button>
       </div>
     </header>
 
     <main class="payment-container">
-      <!-- Section 1: Booking & Order Summary Box -->
+      <!-- ==========================================
+           SECTION 1: BOOKING & ITEM SUMMARY
+           Displays chosen movie, showtime, and seat details
+           ========================================== -->
       <section class="summary-card">
-        <!-- Movie Details Banner -->
         <div class="summary-header">
           <div class="summary-poster">
             <img src="assets/images/obsession-banner.jpeg" alt="OBSESSION" />
@@ -37,6 +35,7 @@
               <span class="age-badge">R-16</span>
             </div>
 
+            <!-- Key Movie Metadata Block -->
             <div class="info-grid">
               <div class="info-item">
                 <span class="info-label">📍 Cinema</span>
@@ -62,7 +61,7 @@
           </div>
         </div>
 
-        <!-- Order Items Breakdown -->
+        <!-- Order Items Breakdown (Tickets + Snacks) -->
         <div class="order-details-box">
           <div class="order-header">
             <h3>Your order</h3>
@@ -70,7 +69,7 @@
           </div>
 
           <div class="order-items-list">
-            <!-- Ticket Item -->
+            <!-- Ticket Item Row -->
             <div class="order-item-row">
               <div class="item-desc">
                 <span class="item-name">1x 2D REG*</span>
@@ -82,7 +81,7 @@
               <span class="item-amount">PHP290.00</span>
             </div>
 
-            <!-- Snack Item -->
+            <!-- Selected Food Item Row -->
             <div class="order-item-row snack-item">
               <div class="snack-info">
                 <img
@@ -96,7 +95,7 @@
             </div>
           </div>
 
-          <!-- Total Calculation -->
+          <!-- Total Price Calculation Display -->
           <div class="pricing-summary">
             <div class="price-row">
               <span>Subtotal</span>
@@ -119,17 +118,18 @@
         </div>
       </section>
 
-      <!-- Section 2: Payment Options -->
+      <!-- ==========================================
+           SECTION 2: PAYMENT METHOD ENTRY
+           ========================================== -->
       <section class="payment-options-section">
         <h1 class="section-title">Payment</h1>
 
-        <!-- Balance Notice Box -->
         <div class="option-box balance-box">
           <p class="box-title">You have no PHP to spend</p>
           <p class="box-subtext">You have 0.00 PHP</p>
         </div>
 
-        <!-- Gift Cards Section -->
+        <!-- Accordion for Gift Card Code Entry -->
         <div class="option-box gift-card-box">
           <div class="box-header">
             <div>
@@ -142,7 +142,7 @@
           </div>
         </div>
 
-        <!-- Payment Summary Box -->
+        <!-- Sticky Total Box -->
         <div class="payment-breakdown-card">
           <div class="price-row">
             <span>Subtotal</span>
@@ -158,9 +158,22 @@
           </div>
         </div>
 
-        <!-- Action Button -->
-        <a href="payment.html" class="btn-card-payment" style="text-decoration: none;">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <!-- Redirect Link to Primary Gateway -->
+        <a
+          href="payment.html"
+          class="btn-card-payment"
+          style="text-decoration: none"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
             <rect x="2" y="5" width="20" height="14" rx="2"></rect>
             <line x1="2" y1="10" x2="22" y2="10"></line>
           </svg>

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/css/movie-details.css" />
   </head>
   <body>
-    <!-- Top Navigation Header -->
+    <!-- Top Navigation Bar -->
     <header class="navbar">
       <a href="movies.html" class="nav-brand">
         <span class="logo-text">ReelSeat</span>
@@ -21,7 +21,9 @@
     </header>
 
     <main class="main-content">
-      <!-- Top Backdrop with Trailer Play Button -->
+      <!-- ==========================================
+           MOVIE HERO BACKDROP & TRAILER TRIGGER
+           ========================================== -->
       <section
         class="movie-backdrop"
         style="
@@ -37,16 +39,18 @@
         </button>
       </section>
 
-      <!-- Movie Information Layout -->
+      <!-- ==========================================
+           MAIN MOVIE INFORMATIONAL GRID
+           ========================================== -->
       <section class="movie-layout">
-        <!-- Left: Overlapping Poster -->
+        <!-- Overlapping Poster Thumbnail Column -->
         <div class="poster-column">
           <div class="detail-poster-wrapper">
             <img src="assets/images/obsession.jpeg" alt="Obsession" />
           </div>
         </div>
 
-        <!-- Right: Movie Details -->
+        <!-- Detailed Description Column -->
         <div class="info-column">
           <div class="movie-header">
             <span class="now-showing-tag"
@@ -60,7 +64,7 @@
           </div>
 
           <div class="details-grid">
-            <!-- Left Info Column -->
+            <!-- Cast & Synopsis Block -->
             <div class="details-left">
               <div class="info-block">
                 <h3>Cast</h3>
@@ -77,7 +81,7 @@
               </div>
             </div>
 
-            <!-- Right Info Column -->
+            <!-- Runtime, Rating & Genres -->
             <div class="details-right">
               <div class="info-block">
                 <h3>Runtime</h3>
@@ -100,11 +104,13 @@
         </div>
       </section>
 
-      <!-- Adapted Showtimes Section (Dark Theme) -->
+      <!-- ==========================================
+           SHOWTIME SELECTION SECTION
+           ========================================== -->
       <section class="showtimes-section" id="showtimes">
         <h2 class="section-title">Showtimes</h2>
 
-        <!-- Date Selector Strip -->
+        <!-- Interactive Date Picker Strip -->
         <div class="date-picker-strip">
           <button class="arrow-btn">&lsaquo;</button>
           <button class="date-tab active">TODAY</button>
@@ -113,7 +119,7 @@
           <button class="arrow-btn">&rsaquo;</button>
         </div>
 
-        <!-- Cinema and Times -->
+        <!-- Cinema Hall Listing & Time Slots -->
         <div class="cinema-block">
           <div class="cinema-meta">
             <span class="attributes"
@@ -121,7 +127,7 @@
               <span class="badge">IMAX</span></span
             >
             <a
-              href="https://www.google.com/search?q=what+is+2d+and+imax&sxsrf=APpeQnsR24yUlojjivd-xifGruTkpS_D_Q%3A1788886387468"
+              href="https://www.google.com/search?q=what+is+2d+and+imax"
               target="_blank"
               class="help-link"
               >What do these mean?</a
@@ -134,6 +140,7 @@
             <span class="badge">IMAX</span>
           </p>
 
+          <!-- Selectable Time Slot Buttons -->
           <div class="time-slots-grid">
             <a
               href="ticket-selection.html"
