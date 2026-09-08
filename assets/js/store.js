@@ -1,4 +1,3 @@
-// assets/js/store.js
 
 const DEFAULT_MOVIES = [
   {
