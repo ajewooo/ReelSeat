@@ -96,6 +96,8 @@
                 id="cardNumber"
                 placeholder="Card Number"
                 maxlength="19"
+                pattern="\d{16,19}"
+                title="Card number must be 16 to 19 digits"
                 required
               />
             </div>
@@ -118,6 +120,8 @@
                   id="cvv"
                   placeholder="CVV"
                   maxlength="4"
+                  pattern="\d{3,4}"
+                  title="3 or 4 digit security code"
                   required
                 />
               </div>

@@ -6,6 +6,7 @@
     <title>Choose your seats - ReelSeat</title>
     <link rel="stylesheet" href="assets/css/global.css" />
     <link rel="stylesheet" href="assets/css/seats.css" />
+    <script src="assets/js/global.js"></script>
   </head>
   <body>
     <!-- Top Navigation Header -->
@@ -114,7 +115,13 @@
             <div class="seat-group">
               <button class="seat available" aria-label="Seat D3"></button>
               <button class="seat selected" aria-label="Seat D4"></button>
-              <button class="seat occupied" aria-label="Seat D5"></button>
+              <button
+                class="seat occupied"
+                disabled
+                tabindex="-1"
+                aria-disabled="true"
+                aria-label="Seat D5 - Occupied"
+              ></button>
               <button class="seat available" aria-label="Seat D6"></button>
             </div>
             <div class="seat-group">
@@ -190,5 +197,6 @@
         </div>
       </section>
     </main>
+    <div id="site-footer"></div>
   </body>
 </html>
