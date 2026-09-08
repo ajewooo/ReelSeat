@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Gateway - ReelSeat</title>
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/payment.css" />
+  </head>
+  <body>
+    <!-- Top Navigation Header -->
+    <header class="navbar">
+      <a href="movies.html" class="nav-brand">
+        <span class="logo-text">ReelSeat</span>
+      </a>
+      <div class="nav-icons">
+        <button class="icon-btn" aria-label="Profile">👤</button>
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main class="payment-wrapper">
+      <div class="gateway-card">
+        <!-- Left Column: Reference & Order Overview -->
+        <aside class="gateway-sidebar">
+          <div class="brand-header">
+            <span class="brand-tag">ReelSeat Express Pay</span>
+          </div>
+
+          <div class="ref-block">
+            <span class="ref-label">REFERENCE NO.</span>
+            <span class="ref-number">100869614</span>
+          </div>
+
+          <div class="amount-block">
+            <span class="currency">PHP</span>
+            <span class="amount">610.00</span>
+          </div>
+
+          <div class="items-summary">
+            <div class="items-header">
+              <span>ITEMS</span>
+              <span class="item-count">1 Product</span>
+            </div>
+            <div class="item-details">
+              <span class="item-name">Cinema Transactions</span>
+              <span class="item-price">PHP 610.00</span>
+            </div>
+            <small class="item-qty">Qty 1</small>
+          </div>
+
+          <div class="gateway-footer">
+            <span>Powered by <strong>ReelSeat Gateway</strong></span>
+          </div>
+        </aside>
+
+        <!-- Right Column: Payment Method Selection -->
+        <section class="gateway-main">
+          <div class="gateway-header">
+            <h2>PAYMENT METHOD</h2>
+            <div class="status-dots">
+              <span class="dot active"></span>
+              <span class="dot active"></span>
+              <span class="dot active"></span>
+              <span class="dot"></span>
+            </div>
+          </div>
+
+          <div class="payment-methods-list">
+            <a href="card-payment.html" class="method-card active" style="text-decoration: none;">
+                <div class="method-icon-box">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="5" width="20" height="14" rx="2"></rect>
+                    <line x1="2" y1="10" x2="22" y2="10"></line>
+                    </svg>
+                </div>
+                <div class="method-info">
+                    <span class="method-title">Credit/Debit Card via Bank Checkout</span>
+                    <span class="method-subtext">Pay with Mastercard, Visa, JCB, Diners Club, AMEX</span>
+                </div>
+                <div class="active-indicator"></div>
+                </a>
+              </div>
+              <div class="active-indicator"></div>
+            </label>
+
+            <!-- Method 2: GCash -->
+            <label class="method-card">
+              <input type="radio" name="payment_method" hidden />
+              <div class="method-icon-box gcash-box">
+                <span>G</span>
+              </div>
+              <div class="method-info">
+                <span class="method-title">GCASH</span>
+                <span class="method-subtext">Pay with GCash</span>
+              </div>
+              <div class="active-indicator"></div>
+            </label>
+
+            <!-- Method 3: GrabPay -->
+            <label class="method-card">
+              <input type="radio" name="payment_method" hidden />
+              <div class="method-icon-box grab-box">
+                <span>Grab</span>
+              </div>
+              <div class="method-info">
+                <span class="method-title">GrabPay</span>
+                <span class="method-subtext">Pay with GrabPay</span>
+              </div>
+              <div class="active-indicator"></div>
+            </label>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
